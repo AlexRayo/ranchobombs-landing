@@ -1,0 +1,28 @@
+{
+  "name": "ranchobombs-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "pug": "pug -w ./src -o ./dist -P",
+    "dev": "concurrently \"npm run tailwind\" \"npm run pug\"",
+    "build": "postcss ./src/output.css -o ./dist/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "autoprefixer": "^10.4.19",
+    "concurrently": "^8.2.2",
+    "cssnano": "^6.1.2",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "postcss-cli": "^11.0.0",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
